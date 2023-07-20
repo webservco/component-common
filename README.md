@@ -42,7 +42,7 @@ DOCKER_IMAGE_TAG="webservco-component-${COMPONENT_NAME}";
 DOCKER_CONTAINER_NAME="webservco-component-${COMPONENT_NAME}-container";
 
 # Download Docker configuration
-svn export https://github.com/webservco/component-common.git/trunk/.docker
+svn export --force https://github.com/webservco/component-common.git/trunk/.docker
 
 # Build and run
 docker build --tag ${DOCKER_IMAGE_TAG} -f .docker/config/php82-cli-copy/Dockerfile .
