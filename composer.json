@@ -1,0 +1,31 @@
+{
+    "authors" : [
+        {
+            "name" : "Radu Maier",
+            "email" : "ariademur@webserv.co"
+        }
+    ],
+    "autoload" : {
+        "psr-4" : {
+            "Tests\\Unit\\" : "tests/Unit/",
+            "WebServCo\\" : "src/WebServCo/"
+        }
+    },
+    "description" : "Common dependencies for component projects.",
+    "homepage" : "https://webserv.co",
+    "keywords" : [
+        "component",
+        "webservco"
+    ],
+    "license" : "MIT",
+    "name" : "webservco/component-common",
+    "require-dev": {
+        "webservco/coding-standards": "^0"
+    },
+    "require": {
+        "php" : "^8.2"
+    },
+    "scripts": {
+    },
+    "type" : "library"
+}
