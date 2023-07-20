@@ -40,9 +40,14 @@ cd ~/p/webservco
 # Customize
 DOCKER_IMAGE_TAG="webservco-component-${COMPONENT_NAME}";
 DOCKER_CONTAINER_NAME="webservco-component-${COMPONENT_NAME}-container";
+
+# Download Docker configuration
+svn export https://github.com/webservco/component-common.git/trunk/.docker
+
 # Build and run
-docker build --tag ${DOCKER_IMAGE_TAG} -f vendor/webservco/component-common/.docker/config/php82-cli-copy/Dockerfile .
+docker build --tag ${DOCKER_IMAGE_TAG} -f .docker/config/php82-cli-copy/Dockerfile .
 docker run -it --rm --name ${DOCKER_CONTAINER_NAME} ${DOCKER_IMAGE_TAG} /bin/bash -c "composer check:phpcs"
+
 # Cleanup
 docker image rm ${DOCKER_IMAGE_TAG}
 ```
@@ -60,7 +65,7 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - webservco/application-runner
 - webservco/command
 - webservco/component-common (Common dependencies)
-- webservco/component-skeleton (Project template)
+- webservco/component-skeleton (Project template, not on packagist)
 - webservco/configuration
 - webservco/configuration-legacy
 - webservco/controller
