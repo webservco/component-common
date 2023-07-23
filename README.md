@@ -8,6 +8,9 @@ Common dependencies for component projects.
 
 ### [Create project repository](https://github.com/organizations/webservco/repositories/new)
 
+- public
+- do not check anything else (no README, etc, make surerepo will be empty initially).
+
 ### Set up project name
 
 ```sh
