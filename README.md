@@ -20,7 +20,7 @@ COMPONENT_NAME='COMPONENT_NAME';
 ### Run customization commands (clone `component-skeleton`)
 
 ```sh
-cd ~/p/webservco && \
+cd ~/p/webservco-components && \
 git clone git@github.com:webservco/component-skeleton.git $COMPONENT_NAME && \
 cd $COMPONENT_NAME && \
 git remote set-url origin git@github.com:webservco/$COMPONENT_NAME.git && \
@@ -32,7 +32,7 @@ git add composer.json && \
 git commit -m 'Customize' && \
 git push -u origin main && \
 mkdir bin config public resources tests && \
-cd ~/p/webservco
+cd ~/p/webservco-components
 ```
 
 ### Add code
@@ -86,6 +86,7 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - webservco/http-request-handler
 - webservco/log
 - webservco/middleware
+- webservco/reflection
 - webservco/route
 - webservco/stopwatch
 - webservco/view
