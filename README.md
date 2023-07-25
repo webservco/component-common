@@ -59,6 +59,8 @@ docker image rm ${DOCKER_IMAGE_TAG}
 
 ### [Publish on packagist](https://packagist.org/packages/submit)
 
+### Update index
+
 ---
 
 ## Index
@@ -72,10 +74,9 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - webservco/configuration
 - webservco/configuration-legacy
 - webservco/controller
-- webservco/data
+- webservco/data-transfer
 - webservco/database
 - webservco/database-legacy
-- webservco/data-transfer
 - webservco/dependency-container
 - webservco/document-object-model
 - webservco/emitter
