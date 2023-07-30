@@ -9,7 +9,7 @@ Common dependencies for component projects.
 ### [Create project repository](https://github.com/organizations/webservco/repositories/new)
 
 - public
-- do not check anything else (no README, etc, make surerepo will be empty initially).
+- do not check anything else (no README, etc, make sure repo will be empty initially).
 
 ### Set up project name
 
@@ -74,7 +74,7 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - webservco/configuration
 - webservco/configuration-legacy
 - webservco/controller
-- webservco/data-transfer
+- webservco/data
 - webservco/database
 - webservco/database-legacy
 - webservco/dependency-container
