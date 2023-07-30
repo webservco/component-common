@@ -19,11 +19,11 @@
     ],
     "license" : "MIT",
     "name" : "webservco/component-common",
-    "require-dev": {
-        "webservco/coding-standards": "^0"
-    },
     "require": {
         "php" : "^8.2"
+    },
+    "require-dev": {
+        "webservco/coding-standards": "^0"
     },
     "scripts": {
     },
