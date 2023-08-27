@@ -39,6 +39,8 @@ cd ~/p/webservco-components
 
 ### Development
 
+Only useful if can not provide environment on local, otherwise it is longer to work in this way.
+
 ```sh
 # Customize
 DOCKER_IMAGE_TAG="webservco-component-${COMPONENT_NAME}";
