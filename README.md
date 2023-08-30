@@ -91,5 +91,6 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - webservco/middleware
 - webservco/reflection
 - webservco/route
+- webservco/session
 - webservco/stopwatch
 - webservco/view
