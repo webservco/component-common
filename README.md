@@ -38,7 +38,7 @@ mkdir bin config public resources tests
 
 ### Development
 
-Only useful if can not provide environment on local, otherwise it is longer to work in this way.
+Only useful if can not provide environment on local, otherwise it is more complex to work in this way.
 
 ```sh
 # Customize
