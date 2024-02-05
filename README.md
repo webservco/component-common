@@ -88,7 +88,9 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - webservco/http
 - webservco/http-request-handler
 - webservco/log
+- webservco/memory
 - webservco/middleware
+- webservco/paypal
 - webservco/reflection
 - webservco/route
 - webservco/session
