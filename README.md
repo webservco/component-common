@@ -56,6 +56,8 @@ docker run -it --rm --name ${DOCKER_CONTAINER_NAME} ${DOCKER_IMAGE_TAG} /bin/bas
 docker image rm ${DOCKER_IMAGE_TAG}
 ```
 
+### Add dependencies
+
 ### Publish tag
 
 ### [Publish on packagist](https://packagist.org/packages/submit)
@@ -87,6 +89,8 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - webservco/form
 - webservco/http
 - webservco/http-request-handler
+- webservco/jsonapi
+- webservco/jwt
 - webservco/log
 - webservco/memory
 - webservco/middleware
