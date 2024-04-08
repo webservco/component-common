@@ -92,6 +92,7 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - webservco/jsonapi
 - webservco/jwt
 - webservco/log
+- webservco/mail
 - webservco/memory
 - webservco/middleware
 - webservco/paypal
