@@ -89,6 +89,8 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - webservco/form
 - webservco/http
 - webservco/http-request-handler
+- http-request-service
+- http-response-service
 - webservco/jsonapi
 - webservco/jsonapi-application
 - webservco/jwt
