@@ -86,6 +86,7 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - webservco/environment
 - webservco/error
 - webservco/exception
+- webservco/file
 - webservco/form
 - webservco/http
 - webservco/http-request-handler
