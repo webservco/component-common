@@ -49,7 +49,7 @@ DOCKER_CONTAINER_NAME="webservco-component-${COMPONENT_NAME}-container";
 svn export --force https://github.com/webservco/component-common.git/trunk/.docker
 
 # Build and run
-docker build --tag ${DOCKER_IMAGE_TAG} -f .docker/config/php82-cli-copy/Dockerfile .
+docker build --tag ${DOCKER_IMAGE_TAG} -f .docker/config/php83-cli-copy/Dockerfile .
 docker run -it --rm --name ${DOCKER_CONTAINER_NAME} ${DOCKER_IMAGE_TAG} /bin/bash -c "composer check:phpcs"
 
 # Cleanup

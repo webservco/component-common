@@ -20,7 +20,7 @@
     "license" : "MIT",
     "name" : "webservco/component-common",
     "require": {
-        "php" : "^8.2"
+        "php" : "^8.3"
     },
     "require-dev": {
         "webservco/coding-standards": "^0"

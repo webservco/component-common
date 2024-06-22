@@ -5,7 +5,7 @@
 
 
 # Use latest PHP CLI image.
-FROM php:8.2-cli
+FROM php:8.3-cli
 
 # Update packages and install git.
 RUN apt-get update && \
