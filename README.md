@@ -89,6 +89,8 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - [webservco/file](https://packagist.org/packages/webservco/file)
 - [webservco/form](https://packagist.org/packages/webservco/form)
 - [webservco/http](https://packagist.org/packages/webservco/http)
+- [webservco/http-client](https://packagist.org/packages/webservco/http-client)
+- webservco/http-client-test (test for http-client, not on packagist)
 - [webservco/http-request-handler](https://packagist.org/packages/webservco/http-request-handler)
 - [webservco/http-request-service](https://packagist.org/packages/webservco/http-request-service)
 - [webservco/http-response-service](https://packagist.org/packages/webservco/http-response-service)
