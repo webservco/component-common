@@ -27,6 +27,7 @@ git remote set-url origin git@github.com:webservco/$COMPONENT_NAME.git && \
 rm -f src/WebServCo/.gitignore && git add src/WebServCo && git commit -m 'Init src' && \
 printf '%s\n' "# webservco/$COMPONENT_NAME" '' 'A PHP component/library.' '' '---' > README.md && \
 sed -i -e "s|\"name\" : \"webservco/component-skeleton\"|\"name\" : \"webservco/$COMPONENT_NAME\"|g" composer.json && \
+sed -i -e "s|name: component-skeleton|name: $COMPONENT_NAME|g" .ddev/config.yaml && \
 git add README.md && \
 git add composer.json && \
 git commit -m 'Customize' && \
@@ -38,7 +39,7 @@ mkdir bin config public resources tests
 
 ### Development
 
-Only useful if can not provide environment on local, otherwise it is more complex to work in this way.
+Only useful if one can not provide environment on local, otherwise it is more complex to work in this way.
 
 ```sh
 # Customize
@@ -49,7 +50,7 @@ DOCKER_CONTAINER_NAME="webservco-component-${COMPONENT_NAME}-container";
 svn export --force https://github.com/webservco/component-common.git/trunk/.docker
 
 # Build and run
-docker build --tag ${DOCKER_IMAGE_TAG} -f .docker/config/php83-cli-copy/Dockerfile .
+docker build --tag ${DOCKER_IMAGE_TAG} -f .docker/config/php84-cli-copy/Dockerfile .
 docker run -it --rm --name ${DOCKER_CONTAINER_NAME} ${DOCKER_IMAGE_TAG} /bin/bash -c "composer check:phpcs"
 
 # Cleanup
