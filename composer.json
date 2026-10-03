@@ -23,7 +23,7 @@
         "php" : "^8.4"
     },
     "require-dev": {
-        "webservco/coding-standards": "^1"
+        "webservco/coding-standards": "^2"
     },
     "scripts": {
     },
