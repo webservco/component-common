@@ -25,7 +25,7 @@ git clone git@github.com:webservco/component-skeleton.git $COMPONENT_NAME && \
 cd $COMPONENT_NAME && \
 git remote set-url origin git@github.com:webservco/$COMPONENT_NAME.git && \
 rm -f src/WebServCo/.gitignore && git add src/WebServCo && git commit -m 'Init src' && \
-printf '%s\n' "# webservco/$COMPONENT_NAME" '' 'A PHP component/library.' '' '---' > README.md && \
+sed -i -e "s|component-skeleton|$COMPONENT_NAME|g" README.md && \
 sed -i -e "s|\"name\" : \"webservco/component-skeleton\"|\"name\" : \"webservco/$COMPONENT_NAME\"|g" composer.json && \
 sed -i -e "s|name: component-skeleton|name: $COMPONENT_NAME|g" .ddev/config.yaml && \
 git add README.md composer.json .ddev/config.yaml && \
