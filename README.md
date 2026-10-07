@@ -1,6 +1,6 @@
 # webservco/component-common
 
-Common dependencies for component projects.
+Common dependencies for component projects: shared PHP_CodeSniffer ruleset (`.phpcs/php-coding-standard.xml`, extends `webservco/coding-standards` with the component namespaces) and Docker configuration.
 
 ---
 
@@ -28,8 +28,7 @@ rm -f src/WebServCo/.gitignore && git add src/WebServCo && git commit -m 'Init s
 printf '%s\n' "# webservco/$COMPONENT_NAME" '' 'A PHP component/library.' '' '---' > README.md && \
 sed -i -e "s|\"name\" : \"webservco/component-skeleton\"|\"name\" : \"webservco/$COMPONENT_NAME\"|g" composer.json && \
 sed -i -e "s|name: component-skeleton|name: $COMPONENT_NAME|g" .ddev/config.yaml && \
-git add README.md && \
-git add composer.json && \
+git add README.md composer.json .ddev/config.yaml && \
 git commit -m 'Customize' && \
 git push -u origin main && \
 mkdir bin config public resources tests
@@ -47,7 +46,8 @@ DOCKER_IMAGE_TAG="webservco-component-${COMPONENT_NAME}";
 DOCKER_CONTAINER_NAME="webservco-component-${COMPONENT_NAME}-container";
 
 # Download Docker configuration
-svn export --force https://github.com/webservco/component-common.git/trunk/.docker
+curl -sL https://github.com/webservco/component-common/archive/refs/heads/main.tar.gz \
+    | tar xz --strip-components=1 component-common-main/.docker
 
 # Build and run
 docker build --tag ${DOCKER_IMAGE_TAG} -f .docker/config/php84-cli-copy/Dockerfile .
@@ -61,6 +61,10 @@ docker image rm ${DOCKER_IMAGE_TAG}
 
 ### Publish tag
 
+```sh
+git tag vX.Y.Z && git push --tags
+```
+
 ### [Publish on packagist](https://packagist.org/packages/submit)
 
 ### Update index
@@ -69,12 +73,19 @@ docker image rm ${DOCKER_IMAGE_TAG}
 
 ## Index
 
+### Misc
+
+- [webservco/coding-standards (Coding standards, dev dependency)](https://packagist.org/packages/webservco/coding-standards)
+- [webservco/component-common (Common dependencies)](https://packagist.org/packages/webservco/component-common)
+- webservco/component-skeleton (Project template, not on packagist)
+- webservco/http-client-test (test for http-client, not on packagist)
+
+### Components
+
 - [webservco/application](https://packagist.org/packages/webservco/application)
 - [webservco/application-default](https://packagist.org/packages/webservco/application-default)
 - [webservco/application-runner](https://packagist.org/packages/webservco/application-runner)
 - [webservco/command](https://packagist.org/packages/webservco/command)
-- [webservco/component-common (Common dependencies)](https://packagist.org/packages/webservco/component-common)
-- webservco/component-skeleton (Project template, not on packagist)
 - [webservco/configuration](https://packagist.org/packages/webservco/configuration)
 - [webservco/configuration-legacy](https://packagist.org/packages/webservco/configuration-legacy)
 - [webservco/controller](https://packagist.org/packages/webservco/controller)
@@ -91,7 +102,6 @@ docker image rm ${DOCKER_IMAGE_TAG}
 - [webservco/form](https://packagist.org/packages/webservco/form)
 - [webservco/http](https://packagist.org/packages/webservco/http)
 - [webservco/http-client](https://packagist.org/packages/webservco/http-client)
-- webservco/http-client-test (test for http-client, not on packagist)
 - [webservco/http-request-handler](https://packagist.org/packages/webservco/http-request-handler)
 - [webservco/http-request-service](https://packagist.org/packages/webservco/http-request-service)
 - [webservco/http-response-service](https://packagist.org/packages/webservco/http-response-service)

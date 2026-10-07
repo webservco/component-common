@@ -4,7 +4,7 @@
 # Minimal Docker setup for PHP library/package/CLI development.
 
 
-# Use latest PHP CLI image.
+# Use PHP 8.4 CLI image.
 FROM php:8.4-cli
 
 # Update packages and install git.
@@ -39,5 +39,5 @@ USER dev
 # Install composer dependencies
 RUN composer update
 
-# Setup compsoer checks as default command.
+# Setup composer checks as default command.
 CMD ["composer", "check:phpcs"]
