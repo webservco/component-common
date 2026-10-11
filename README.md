@@ -1,6 +1,6 @@
 # webservco/component-common
 
-Common dependencies for component projects: shared PHP_CodeSniffer ruleset (`.phpcs/php-coding-standard.xml`, extends `webservco/coding-standards` with the component namespaces) and Docker configuration.
+Common dependencies for component projects. It holds the shared PHP_CodeSniffer ruleset (`.phpcs/php-coding-standard.xml`, which extends `webservco/coding-standards` with the component namespaces) and the Docker configuration.
 
 ---
 
@@ -9,7 +9,7 @@ Common dependencies for component projects: shared PHP_CodeSniffer ruleset (`.ph
 ### [Create project repository](https://github.com/organizations/webservco/repositories/new)
 
 - public
-- do not check anything else (no README, etc, make sure repo will be empty initially).
+- leave every other option unchecked (no README, license or `.gitignore`). The repository has to start empty.
 
 ### Set up project name
 
@@ -24,21 +24,39 @@ cd ~/p/webservco-components && \
 git clone git@github.com:webservco/component-skeleton.git $COMPONENT_NAME && \
 cd $COMPONENT_NAME && \
 git remote set-url origin git@github.com:webservco/$COMPONENT_NAME.git && \
-rm -f src/WebServCo/.gitignore && git add src/WebServCo && git commit -m 'Init src' && \
 sed -i -e "s|component-skeleton|$COMPONENT_NAME|g" README.md && \
 sed -i -e "s|\"name\" : \"webservco/component-skeleton\"|\"name\" : \"webservco/$COMPONENT_NAME\"|g" composer.json && \
 sed -i -e "s|name: component-skeleton|name: $COMPONENT_NAME|g" .ddev/config.yaml && \
 git add README.md composer.json .ddev/config.yaml && \
 git commit -m 'Customize' && \
-git push -u origin main && \
-mkdir bin config public resources tests
+git push -u origin main
 ```
+
+The skeleton already contains every directory the checks expect (`bin`, `config`, `docs`, `public`, `resources`, `src/WebServCo`, `tests/Unit/WebServCo`), each kept in git by an empty `.gitkeep`.
 
 ### Add code
 
+- Code goes in `src/WebServCo/` (namespace `WebServCo\`), unit tests in `tests/Unit/` (namespace `Tests\Unit\`).
+- Delete a directory's `.gitkeep` once it holds real files.
+- Fill in the README template. The hidden comment at the top of the file explains how; delete it and the template note when done.
+- Set `description` in `composer.json` to the README description ("A PHP component/library." plus one sentence).
+
 ### Development
 
-Only useful if one can not provide environment on local, otherwise it is more complex to work in this way.
+```sh
+# Start project.
+ddev start
+# Install dependencies.
+ddev c u
+# Run all validations.
+ddev c c
+# Run unit tests.
+ddev c test:dox
+```
+
+#### Without ddev (Docker)
+
+Use this only when you can't set up a local environment. Working through Docker this way is more cumbersome.
 
 ```sh
 # Customize
