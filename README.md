@@ -142,4 +142,3 @@ git tag vX.Y.Z && git push --tags
 - webservco/configuration-contract
 - webservco/data-transfer
 - webservco/log-contract
-- 
