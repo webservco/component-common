@@ -91,13 +91,6 @@ git tag vX.Y.Z && git push --tags
 
 ## Index
 
-### Misc
-
-- [webservco/coding-standards (Coding standards, dev dependency)](https://packagist.org/packages/webservco/coding-standards)
-- [webservco/component-common (Common dependencies)](https://packagist.org/packages/webservco/component-common)
-- webservco/component-skeleton (Project template, not on packagist)
-- webservco/http-client-test (test for http-client, not on packagist)
-
 ### Components
 
 - [webservco/application](https://packagist.org/packages/webservco/application)
@@ -136,3 +129,17 @@ git tag vX.Y.Z && git push --tags
 - [webservco/session](https://packagist.org/packages/webservco/session)
 - [webservco/stopwatch](https://packagist.org/packages/webservco/stopwatch)
 - [webservco/view](https://packagist.org/packages/webservco/view)
+
+### Misc
+
+- [webservco/coding-standards (Coding standards, dev dependency)](https://packagist.org/packages/webservco/coding-standards)
+- [webservco/component-common (Common dependencies)](https://packagist.org/packages/webservco/component-common)
+- webservco/component-skeleton (Project template, not on packagist)
+- webservco/http-client-test (test for http-client, not on packagist)
+
+### Deprecated (archived)
+
+- webservco/configuration-contract
+- webservco/data-transfer
+- webservco/log-contract
+- 
