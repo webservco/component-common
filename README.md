@@ -93,6 +93,7 @@ git tag vX.Y.Z && git push --tags
 
 ### Components
 
+- [webservco/auth](https://packagist.org/packages/webservco/auth)
 - [webservco/application](https://packagist.org/packages/webservco/application)
 - [webservco/application-default](https://packagist.org/packages/webservco/application-default)
 - [webservco/application-runner](https://packagist.org/packages/webservco/application-runner)
@@ -122,6 +123,7 @@ git tag vX.Y.Z && git push --tags
 - [webservco/log](https://packagist.org/packages/webservco/log)
 - [webservco/mail](https://packagist.org/packages/webservco/mail)
 - [webservco/memory](https://packagist.org/packages/webservco/memory)
+- [webservco/mfa](https://packagist.org/packages/webservco/mfa)
 - [webservco/middleware](https://packagist.org/packages/webservco/middleware)
 - [webservco/paypal](https://packagist.org/packages/webservco/paypal)
 - [webservco/reflection](https://packagist.org/packages/webservco/reflection)
