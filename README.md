@@ -114,6 +114,7 @@ git tag vX.Y.Z && git push --tags
 - [webservco/exception](https://packagist.org/packages/webservco/exception)
 - [webservco/file](https://packagist.org/packages/webservco/file)
 - [webservco/form](https://packagist.org/packages/webservco/form)
+- [webservco/i18n](https://packagist.org/packages/webservco/i18n)
 - [webservco/http](https://packagist.org/packages/webservco/http)
 - [webservco/http-client](https://packagist.org/packages/webservco/http-client)
 - [webservco/http-request-handler](https://packagist.org/packages/webservco/http-request-handler)
