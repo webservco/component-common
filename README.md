@@ -77,6 +77,8 @@ docker image rm ${DOCKER_IMAGE_TAG}
 
 ### Add dependencies
 
+Require webservco components by major version only, in components and in the projects that use them, eg: `"webservco/component": "^2"`. Composer then installs each new tag of that major.
+
 ### Publish tag
 
 ```sh
