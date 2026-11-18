@@ -98,10 +98,10 @@ git tag vX.Y.Z && git push --tags
 
 ### Components
 
-- [webservco/auth](https://packagist.org/packages/webservco/auth)
 - [webservco/application](https://packagist.org/packages/webservco/application)
 - [webservco/application-default](https://packagist.org/packages/webservco/application-default)
 - [webservco/application-runner](https://packagist.org/packages/webservco/application-runner)
+- [webservco/auth](https://packagist.org/packages/webservco/auth)
 - [webservco/command](https://packagist.org/packages/webservco/command)
 - [webservco/configuration](https://packagist.org/packages/webservco/configuration)
 - [webservco/configuration-legacy](https://packagist.org/packages/webservco/configuration-legacy)
@@ -117,12 +117,12 @@ git tag vX.Y.Z && git push --tags
 - [webservco/exception](https://packagist.org/packages/webservco/exception)
 - [webservco/file](https://packagist.org/packages/webservco/file)
 - [webservco/form](https://packagist.org/packages/webservco/form)
-- [webservco/i18n](https://packagist.org/packages/webservco/i18n)
 - [webservco/http](https://packagist.org/packages/webservco/http)
 - [webservco/http-client](https://packagist.org/packages/webservco/http-client)
 - [webservco/http-request-handler](https://packagist.org/packages/webservco/http-request-handler)
 - [webservco/http-request-service](https://packagist.org/packages/webservco/http-request-service)
 - [webservco/http-response-service](https://packagist.org/packages/webservco/http-response-service)
+- [webservco/i18n](https://packagist.org/packages/webservco/i18n)
 - [webservco/jsonapi](https://packagist.org/packages/webservco/jsonapi)
 - [webservco/jsonapi-application](https://packagist.org/packages/webservco/jsonapi-application)
 - [webservco/jwt](https://packagist.org/packages/webservco/jwt)
