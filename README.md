@@ -110,6 +110,7 @@ git tag vX.Y.Z && git push --tags
 - [webservco/database](https://packagist.org/packages/webservco/database)
 - [webservco/database-legacy](https://packagist.org/packages/webservco/database-legacy)
 - [webservco/dependency-container](https://packagist.org/packages/webservco/dependency-container)
+- [webservco/discogs-authentication](https://packagist.org/packages/webservco/discogs-authentication)
 - [webservco/document-object-model](https://packagist.org/packages/webservco/document-object-model)
 - [webservco/emitter](https://packagist.org/packages/webservco/emitter)
 - [webservco/environment](https://packagist.org/packages/webservco/environment)
