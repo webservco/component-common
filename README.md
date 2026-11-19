@@ -28,8 +28,7 @@ sed -i -e "s|component-skeleton|$COMPONENT_NAME|g" README.md && \
 sed -i -e "s|\"name\" : \"webservco/component-skeleton\"|\"name\" : \"webservco/$COMPONENT_NAME\"|g" composer.json && \
 sed -i -e "s|name: component-skeleton|name: $COMPONENT_NAME|g" .ddev/config.yaml && \
 git add README.md composer.json .ddev/config.yaml && \
-git commit -m 'Customize' && \
-git push -u origin main
+git commit -m 'Customize'
 ```
 
 The clone brings the skeleton's history, which every component shares. The skeleton has no tags, so the component's first release starts from its own tags. Don't tag `component-skeleton`: a clone would copy those tags, and a later `git push --tags` would publish them as releases of the new component.
@@ -42,6 +41,12 @@ The skeleton already contains every directory the checks expect (`bin`, `config`
 - Delete a directory's `.gitkeep` once it holds real files.
 - Fill in the README template. The hidden comment at the top of the file explains how; delete it and the template note when done.
 - Set `description` in `composer.json` to the README description ("A PHP component/library." plus one sentence).
+
+### Publish
+
+```shell
+git push -u origin main
+```
 
 ### Development
 
