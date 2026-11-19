@@ -23,7 +23,6 @@ COMPONENT_NAME='COMPONENT_NAME';
 cd ~/p/webservco-components && \
 git clone git@github.com:webservco/component-skeleton.git $COMPONENT_NAME && \
 cd $COMPONENT_NAME && \
-git for-each-ref --format='delete %(refname)' refs/tags | git update-ref --stdin && \
 git remote set-url origin git@github.com:webservco/$COMPONENT_NAME.git && \
 sed -i -e "s|component-skeleton|$COMPONENT_NAME|g" README.md && \
 sed -i -e "s|\"name\" : \"webservco/component-skeleton\"|\"name\" : \"webservco/$COMPONENT_NAME\"|g" composer.json && \
@@ -33,7 +32,7 @@ git commit -m 'Customize' && \
 git push -u origin main
 ```
 
-The clone brings the skeleton's history (shared by every component) and its version tags. The `git for-each-ref … | git update-ref --stdin` line deletes those tags, so the component's first release starts from its own tags. Without it, a later `git push --tags` publishes the skeleton's `v2.x` tags as releases of the new component.
+The clone brings the skeleton's history, which every component shares. The skeleton has no tags, so the component's first release starts from its own tags. Don't tag `component-skeleton`: a clone would copy those tags, and a later `git push --tags` would publish them as releases of the new component.
 
 The skeleton already contains every directory the checks expect (`bin`, `config`, `docs`, `public`, `resources`, `src/WebServCo`, `tests/Unit/WebServCo`), each kept in git by an empty `.gitkeep`.
 
