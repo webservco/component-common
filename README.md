@@ -117,6 +117,7 @@ git tag vX.Y.Z && git push --tags
 - [webservco/discogs-authentication](https://packagist.org/packages/webservco/discogs-authentication)
 - [webservco/document-object-model](https://packagist.org/packages/webservco/document-object-model)
 - [webservco/emitter](https://packagist.org/packages/webservco/emitter)
+- [webservco/encryption](https://packagist.org/packages/webservco/encryption)
 - [webservco/environment](https://packagist.org/packages/webservco/environment)
 - [webservco/error](https://packagist.org/packages/webservco/error)
 - [webservco/exception](https://packagist.org/packages/webservco/exception)
