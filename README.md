@@ -102,6 +102,7 @@ git tag vX.Y.Z && git push --tags
 
 ### Components
 
+- [webservco/access-control](https://packagist.org/packages/webservco/access-control)
 - [webservco/application](https://packagist.org/packages/webservco/application)
 - [webservco/application-default](https://packagist.org/packages/webservco/application-default)
 - [webservco/application-runner](https://packagist.org/packages/webservco/application-runner)
